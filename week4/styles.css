@@ -1,0 +1,419 @@
+
+/* PICTURE YOUR CRAVINGS
+   WEEK 4 WEB DESIGN ASSIGNMENT*/
+
+   /* ROOT FONT SIZE */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* COLOR PALETTE AND GENERAL STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+
+    background-color: #550C18;
+    background-image: url('./assets/polkadot.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+    font-family: "Open Sans", sans-serif;
+    color: #443730;
+}
+
+
+/*NAVIGATION BAR */
+
+nav {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: #550C18;
+    color: #F7DAD9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px;
+    z-index: 10;
+}
+
+/* WEBSITE TITLE */
+
+nav > header {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* NAVIGATION LIST */
+
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-left: 24px;
+}
+
+/* NAVIGATION ITEMS */
+
+nav ul > li {
+    padding: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* NAVIGATION LINKS */
+
+nav a {
+    color: #F7DAD9;
+    text-decoration: none;
+    display: block;
+}
+
+/* NAVIGATION HOVER */
+
+nav ul > li:hover {
+    background-color: #F7DAD9;
+    border-radius: 6px;
+}
+
+nav ul > li:hover a {
+    color: #550C18;
+}
+
+
+/* WELCOME SECTION */
+
+.hero {
+    background-image: url('./assets/table.jpg');
+    height: 75vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* WELCOME TEXT CONTAINER */
+
+.heroContent {
+    background-color: rgba(85, 12, 24, 0.85);
+    color: #F7DAD9;
+    padding: 36px;
+    width: 70%;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* WELCOME HEADING */
+
+.hero h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+}
+
+/* WELCOME PARAGRAPH */
+
+.hero p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+
+/* SECTION TITLES */
+
+.sectionTitle {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    color: #550C18;
+    text-align: center;
+    padding: 12px;
+}
+
+
+/* FOOD DASHBOARD*/
+
+.dashboard {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* INDIVIDUAL FOOD CARDS
+   CSS GRID: 2 ROWS X 1 COLUMN */
+
+.foodCard {
+    background-color: #F7DAD9;
+    color: #443730;
+    border-radius: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 1fr;
+    transition: transform 0.3s ease;
+}
+
+/* CARD HOVER EFFECT */
+
+.foodCard:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOD IMAGES */
+
+.foodCard > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* CARD INFORMATION */
+
+.cardInfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+/* FOOD CARD TITLES */
+
+.cardInfo > h2 {
+    font-family: "Dancing Script", cursive;
+    color: #550C18;
+    font-size: 2rem;
+}
+
+/* FOOD RATINGS */
+
+.cardInfo > h3 {
+    color: #786452;
+    font-size: 1rem;
+}
+
+/* FOOD DESCRIPTIONS */
+
+.cardInfo > p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* MORE CRAVINGS GALLERY */
+
+.favorites {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* FAVORITE CARDS */
+
+.favorites > div {
+    background-color: #F7DAD9;
+    color: #443730;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.favorites > div:hover {
+    transform: translateY(-5px);
+}
+
+/* FAVORITE IMAGES */
+
+.favorites img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* FAVORITE TITLES */
+
+.favorites h2 {
+    font-family: "Dancing Script", cursive;
+    color: #550C18;
+    font-size: 2rem;
+}
+
+
+/* ABOUT ME SECTION */
+
+.about {
+    background-color: #A5907E;
+    color: #443730;
+    padding: 40px;
+    margin: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ABOUT ME TITLE */
+
+.about h2 {
+    font-family: "Dancing Script", cursive;
+    color: #550C18;
+    font-size: 2.5rem;
+}
+
+/* ABOUT ME PARAGRAPH */
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+
+/* FOOTER*/
+
+footer {
+    background-color: #443730;
+    color: #F7DAD9;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* FOOTER TITLE */
+
+footer h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+}
+
+/* INSTAGRAM*/
+
+footer a {
+    color: #F7DAD9;
+    text-decoration: none;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #F7DAD9;
+    color: #550C18;
+    border-radius: 6px;
+}
+
+
+/* MOBILE*/
+
+@media screen and (max-width: 720px) {
+
+    /* ROOT FONT SIZE */
+
+    html {
+        font-size: 12px;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    nav > ul {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        justify-content: space-evenly;
+        gap: 0px;
+    }
+
+    nav ul > li {
+        padding: 8px 4px;
+        white-space: nowrap;
+    }
+
+    /* WELCOME SECTION */
+
+    .hero {
+        height: 75vh;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .heroContent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* MAIN FOOD GRID */
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 12px;
+    }
+
+    /* FOOD CARDS */
+
+    .foodCard {
+        min-height: 100svh;
+        grid-template-rows: 45svh 1fr;
+    }
+
+    .foodCard > img {
+        height: 45svh;
+    }
+
+    /* FAVORITES GALLERY */
+
+    .favorites {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    /* ABOUT ME */
+
+    .about {
+        padding: 24px;
+        margin: 12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 24px;
+    }
+
+}
